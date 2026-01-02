@@ -1,0 +1,10 @@
+---
+- name: clone my mac env
+  hosts: localhost
+  connection: local
+  
+  tasks:
+    - name: use Brewfile install all
+      community.general.homebrew_bundle:
+        # 指向刚才生成的 Brewfile 路径
+        file: "./Brewfile"
